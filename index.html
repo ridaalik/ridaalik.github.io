@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rida Ali | Personal Website</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Rida Ali Khan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f8f9fa;
-      --text: #2c3e50;
-      --accent: #006494;
-      --accent-dark: #004e7c;
-      --border: #e0e0e0;
+      --white: #ffffff;
+      --lightgrey: #f3f3f3;
+      --darkgrey: #2f2f2f;
+      --linkblue: #1a73e8;
     }
 
     * {
@@ -21,160 +20,145 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      font-family: 'Libre Baskerville', serif;
+      background-color: var(--lightgrey);
+      color: var(--darkgrey);
     }
 
-    header {
-      background: var(--accent);
-      color: white;
-      padding: 4rem 1.5rem;
+    .hero {
+      height: 35vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       text-align: center;
+      background-color: var(--white);
     }
 
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
+    .hero h1 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 0.3rem;
     }
 
-    header p {
-      font-size: 1.2rem;
+    .hero p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .nav-container {
+      background-color: var(--white);
+    }
+
+    .nav-border {
+      width: 70%;
+      margin: 0 auto;
+      border-top: 1px solid #ccc;
     }
 
     nav {
-      background-color: white;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
       padding: 1rem 0;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      background-color: var(--white);
     }
 
     nav a {
-      margin: 0 1.2rem;
       text-decoration: none;
-      color: var(--accent);
-      font-weight: 500;
-      transition: color 0.3s ease;
+      color: var(--darkgrey);
+      font-weight: bold;
+      font-size: 1rem;
     }
 
-    nav a:hover {
-      color: var(--accent-dark);
-    }
-
-    section {
-      max-width: 900px;
+    .about-section {
+      max-width: 1000px;
       margin: 3rem auto;
-      padding: 0 1.5rem;
+      padding: 0 1rem;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--white);
+      border-radius: 8px;
+      padding: 2rem;
     }
 
-    h2 {
-      font-size: 2rem;
-      border-bottom: 2px solid var(--border);
-      margin-bottom: 1rem;
-      padding-bottom: 0.4rem;
-      color: var(--text);
+    .about-text {
+      flex: 1;
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
-    ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-      margin-top: 1rem;
+    .about-text a {
+      color: var(--linkblue);
+      text-decoration: underline;
     }
 
-    p {
-      margin: 1rem 0;
+    .about-image {
+      flex: 1;
+      text-align: right;
     }
 
-    .button {
-      background-color: var(--accent);
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 4px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 1rem;
-      transition: background-color 0.3s ease;
-    }
-
-    .button:hover {
-      background-color: var(--accent-dark);
+    .about-image img {
+      width: 250px;
+      max-width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
     }
 
     footer {
-      background-color: white;
       text-align: center;
       padding: 2rem 1rem;
-      border-top: 1px solid var(--border);
-      margin-top: 3rem;
-      color: #777;
       font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #ddd;
+      margin-top: 3rem;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        text-align: center;
       }
 
-      nav a {
-        margin: 0 0.7rem;
+      .about-image {
+        text-align: center;
+        margin-top: 1rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Rida Ali</h1>
-    <p>PhD Candidate · CERDI Lab · Development Economics</p>
-  </header>
+  <div class="hero">
+    <h1>Rida Ali Khan</h1>
+    <p>Development Economist | PhD Student</p>
+  </div>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#cv">CV</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="nav-container">
+    <div class="nav-border"></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#cv">CV</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+    </nav>
+    <div class="nav-border"></div>
+  </div>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a PhD candidate at CERDI Lab with research interests in development economics, disaster impacts, and early interventions. With experience at the World Bank and PIDE, I combine rigorous econometric techniques with policy-relevant questions.</p>
-  </section>
-
-  <section id="research">
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Impact evaluation (RCTs & quasi-experimental methods)</li>
-      <li>In-utero and early-life exposure to disasters</li>
-      <li>Education and recovery in conflict-affected settings</li>
-      <li>Long-term evaluation of public programs</li>
-    </ul>
-  </section>
-
-  <section id="publications">
-    <h2>Publications & Projects</h2>
-    <ul>
-      <li><strong>Long-term Effects of the 2010 Pakistan Floods:</strong> In-utero exposure & fertility outcomes (Working Paper)</li>
-      <li>Reviewer & Annotator, World Bank DIME AI project (2024–25)</li>
-      <li>Upcoming poster: Disaster impacts on women's long-term outcomes</li>
-    </ul>
-  </section>
-
-  <section id="cv">
-    <h2>Curriculum Vitae</h2>
-    <p>Download my CV:</p>
-    <a class="button" href="cv.pdf" target="_blank">Download CV</a>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: rida.ali@email.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+  <section id="about" class="about-section">
+    <div class="about-text">
+      <p>I’m a short-term consultant at the <a href="https://www.worldbank.org" target="_blank">World Bank</a> and a PhD student at <a href="https://cerdi.uca.fr/" target="_blank">CERDI</a>.  
+      My research focuses on development economics — particularly education, children, women, climate, and natural disasters.</p>
+    </div>
+    <div class="about-image">
+      <img src="rida.jpg" alt="Rida Ali Khan">
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 Rida Ali — All rights reserved
+    &copy; 2025 Rida Ali Khan. All rights reserved.
   </footer>
 
 </body>
